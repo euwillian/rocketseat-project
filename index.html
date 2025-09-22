@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport irá adaptar ao tamanho do dispositivo -->
+    <title>Devlinks</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- 
+    Div é uma caixa genérica, que não tem estilos que o browser aplica nela naturalmente
+    precisamos por atributos, exemplo id=
+    Não podemos ter ids com o mesmo nome pois podem causar problemas no css, js por exemplo, além do html
+    não estar nos padrões da W3C, se necessário utilize class=
+    -->
+    <div id="container">
+      <!-- primeira div -->
+      <div id="profile">
+        <!-- segunda div -->
+        <img
+          src="/assets/avatar.png"
+          alt="Foto de Willian Santos, sorrindo, usando óculos e camisa preta, barba e fundo cor ..."
+        />
+        <p>@eitawillian</p>
+      </div>
+      <div id="switch" onclick="toggleMode()">
+        <button>
+        </button>
+        <span></span>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#" target="_blank">Adicione o link</a></li>
+          <li><a href="#" target="_blank">Adicione o link</a></li>
+          <li><a href="#" target="_blank">Adicione o link</a></li>
+          <li><a href="#" target="_blank">Adicione o link</a></li>
+          <li>
+            <a href="https://www.pomodorobrasil.com" target="_blank"
+              >Use o Pomodoro para Estudar</a>
+          </li>
+        </ul>
+        <div id="social-links">
+          <a href="https://github.com/euwillian" target="_blank"
+            ><ion-icon name="logo-github"></ion-icon
+          ></a>
+          <a href="https://www.instagram.com/eitawillian/" target="_blank"
+            ><ion-icon name="logo-instagram"></ion-icon
+          ></a>
+          <a href="https://" target="_blank"
+            ><ion-icon name="logo-youtube"></ion-icon
+          ></a>
+          <a href="https://www.linkedin.com/in/euwillian/" target="_blank"
+            ><ion-icon name="logo-linkedin"></ion-icon
+          ></a>
+        </div>
+
+        <footer>
+          Feito com carinho por
+          <a href="https://github.com/euwillian" target="_blank">Willian S.</a>
+        </footer>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+body {
+    background: whitesmoke;
+    /* comentário, irá mudar o fundo do meu site */
+}
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+    border: 1px solid green;
+    height: 50px;
+}
+
+h2 {
+    text-align: center;
+    background-color: yellow;
+}
+
+p {
+    color: black;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+img {
+    border-image: round;
+    border-radius: 50%;
+}
+
+#unico-1 {
+    color: purple;
+    /* Esse trecho mostra que a especificidade é maior do que se fosse só o <p> e identifica um identificador, peso 101 */
+}
+
+.class-1 {
+    color: green;
+    /* Esse trecho é uma classe em um paragrafo peso 010 */
+}
+
+header {
+    border: 1px solid red;
+    padding: 60px;
+    /* Criando a primeira caixa */
+}
+
+span {
+    display: block;
+    border: 1px solid yellow;
+
+    /* Quando usamos o elemento display serve para tratar o elemento em linha - inline ou como uma caixa completa block, padrão = inline */
+}
+
+/*
+
+Especificidade: A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais relevantes para o elemento a ser utilizado
+
+Exemplo:
+
+<body></body> -> ao deixar o mouse em cima, é mostrado o Seletor Especificidade.
+
+----------
+
+Box Model -> Tudo são caixas, todos elementos do HTML serão considerados uma caixa. E todos possuem determinadas propriedades: conteúdo, largura, altura, borda, preenchimento e espaçamento
+
+*/
