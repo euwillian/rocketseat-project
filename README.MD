@@ -29,7 +29,13 @@ rocketseat-project/
 ├── index.html     # Página principal
 ├── style.css      # Estilos
 └── script.js      # Lógica em JavaScript
+```
 
+Como executar:
+
+```bash
 git clone https://github.com/euwillian/rocketseat-project.git
+cd rocketseat-project
+```
 
 Feito com 💜 por Willian
