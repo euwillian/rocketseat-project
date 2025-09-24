@@ -26,7 +26,6 @@
 
 body {
   /*
-
   https://css-tricks.com/
 
   background-image: url(./assets/bg-mobile.jpg);
@@ -36,11 +35,11 @@ body {
 
   eixo x -> horizontal da tela
   eixo y ^  vertical da tela
-  */
-
-  /* shorthand: tudo em uma unica linha
   
-  background: color image repeat position/size */
+  shorthand: tudo em uma unica linha
+  
+  background: color image repeat position/size 
+  */
 
   background: var(--bg-url) repeat top center/cover;
   height: 100vh;
@@ -53,14 +52,14 @@ body * {
 
 /*
 #: hashtag é o identificador de IDs
-Somente com as propriedades abaixo já conseguimos ver o container desenhado na tela
+  Somente com as propriedades abaixo já conseguimos ver o container desenhado na tela
 
   height: 721px;
   width: 360px;
   border: 1px solid red;
 */
 #container {
-  /* height: 721px; altura tem que ser dinâmica*/
+  /* height: 721px; altura tem que ser dinâmica */
   width: 100%;
   max-width: 588px;
   margin: 56px auto auto auto; /* sentido horário caixa top, right, bottom, left*/
@@ -68,7 +67,8 @@ Somente com as propriedades abaixo já conseguimos ver o container desenhado na 
   padding: 0 24px;
 }
 
-/* container/caixa da foto 
+/* 
+container/caixa da foto 
 irá buscar o id=profile e a tag img
 div = display block
 img = display inline (nao da para aplicar margin: auto;)
@@ -78,7 +78,10 @@ img = display inline (nao da para aplicar margin: auto;)
 
 #profile {
   text-align: center;
-  /* classe pai da profile img, definimos o text-align, por ser uma div, dessa forma nao preciso alinhar o img porque nao funcionaria por ser inline*/
+/* 
+classe pai da profile img, definimos o text-align, por ser uma div, 
+dessa forma nao preciso alinhar o img porque nao funcionaria por ser inline
+*/
   padding: 24px;
 }
 
@@ -112,11 +115,21 @@ img = display inline (nao da para aplicar margin: auto;)
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.3s;
 }
 
 .light #switch button{
+  animation: slide-in 0.4s forwards;
+  /* 
+  removido, usando @keyframe
   right: 0;
-  left: initial;
+  left: initial; 
+  */
+}
+
+#switch button:hover{
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span{
@@ -202,5 +215,25 @@ footer {
 
   .light{
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation */
+
+@keyframes slide-in {
+  from {
+    left: 0; 
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%; 
+  }
+  to {
+    left: 0;
   }
 }
