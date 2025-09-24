@@ -60,7 +60,8 @@ Somente com as propriedades abaixo já conseguimos ver o container desenhado na 
 */
 #container {
   /* height: 721px; altura tem que ser dinâmica*/
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto auto auto; /* sentido horário caixa top, right, bottom, left*/
   /* border: 1px solid red; caixa somente para visualizacao */
   padding: 0 24px;
